@@ -16,7 +16,7 @@ export default async function Home() {
   const total = expenses.reduce((acc: number, curr: any) => acc + curr.amount, 0);
 
   return (
-    <main className="max-w-4xl mx-auto p-6">
+    <main className="max-w-4xl mx-auto p-6 bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-lg ">
       <h1 className="text-3xl font-bold text-center mb-8">CoinCount Tracker</h1>
       
      
@@ -26,7 +26,7 @@ export default async function Home() {
       </div>
 
     
-      <form action={addExpense} className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-6 rounded-lg shadow-sm mb-10">
+      <form action={addExpense} className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-gray-50 p-6 rounded-4xl shadow-sm mb-10">
         <input name="title" placeholder="Expense Title" className="border p-3 rounded" required />
         <input name="amount" type="number" placeholder="Amount" className="border p-3 rounded" required />
         <select name="category" className="border p-3 rounded">
@@ -36,7 +36,7 @@ export default async function Home() {
           <option value="Others">Others</option>
         </select>
         <input name="date" type="date" className="border p-3 rounded" required />
-        <button type="submit" className="bg-green-600 text-white p-3 rounded md:col-span-2 hover:bg-green-700">Add Expense</button>
+        <button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 text-white p-3 rounded md:col-span-2 transition-all duration-300 shadow-md hover:shadow-lg transform">Add Expense</button>
       </form>
 
       
